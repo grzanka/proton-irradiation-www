@@ -1,0 +1,54 @@
+site_name: Proton Irradiation Facility at IFJ
+theme:
+  name: material
+
+  features:
+    # - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    #- content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    #- navigation.expand
+    #- navigation.footer
+    #- navigation.indexes
+    #- navigation.instant
+    - navigation.prune
+    - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    #- navigation.tracking
+    - search.highlight
+    #- search.share
+    - search.suggest
+    #- toc.follow
+    #- toc.integrate
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/favicon.png
+  logo: logo_ifj_kolor.jpg
+
+nav:
+    - IRRADIATION STATIONS:
+        - STATION 1: hall1.md
+        - STATION 2: hall2.md
+    - How to apply: order.md
+    - Contact: contact.md 
+
