@@ -17,4 +17,4 @@ Beam parameters:
 - Sample positioning precision (> 0.1 mm);
 
 
-![Experimental hall 1](eyehall.png)
+![Experimental hall 1](img/eyehall.png)
