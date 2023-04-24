@@ -15,4 +15,4 @@ Beam parameters:
 - High proton beam  intensity and irradiation field configuration flexibility;
 
 
-![Experimental hall 12](exphall.png)
+![Experimental hall 12](img/exphall.png)

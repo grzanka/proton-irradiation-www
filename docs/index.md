@@ -24,4 +24,4 @@ Our infrastructure allows us to irradiate various types of samples:
 
 We invite our guests and clients to cooperate.
 
-![AIC-144 cyclotron](aic.png)
+![AIC-144 cyclotron](img/aic.png)
