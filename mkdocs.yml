@@ -1,11 +1,11 @@
-site_name: Proton Irradiation Facility at IFJ
+site_name: Proton Irradiation Station at IFJ
 theme:
   name: material
+  custom_dir: overrides
   language: en
 
   # Icons
   icon:
-    # edit: material/pencil
     logo: material/library
 
   features:
@@ -16,7 +16,7 @@ theme:
     - content.code.copy
     #- content.tabs.link
     - content.tooltips
-    # - header.autohide
+    - header.autohide
     #- navigation.expand
     #- navigation.footer
     #- navigation.indexes
@@ -60,6 +60,7 @@ extra:
     - icon: fontawesome/solid/paper-plane
       link: mailto:proton.irradiations@ifj.edu.pl
 nav:
+    - Home: index.md
     - IRRADIATION STATIONS:
         - STATION 1: hall1.md
         - STATION 2: hall2.md
