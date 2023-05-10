@@ -1,23 +1,19 @@
 ---
 hide:
     - toc
-    - sections
-    - nav
+    - navigation
 ---
 
+### Administration:
 
-Secretary:
-
-mgr inż. Dominika Handzlik
+M.Sc., Eng. Dominika Handzlik
 
 - tel: +48126628415, +48691113374
+- e-mail: proton.irradiations@ifj.edu.pl
 
-- e-mail: Dominika.Handzlik@ifj.edu.pl, proton.irradiations@ifj.edu.pl
-
-Adress:
+### Adress:
 
 Institute of Nuclear Physics PAN
-
 ul. Radzikowskiego 152
 31-342 Kraków
 Poland
