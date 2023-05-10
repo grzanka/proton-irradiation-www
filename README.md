@@ -27,3 +27,14 @@ The page is generated using [mkdocs](https://www.mkdocs.org/). The repository co
 - `requirements.txt` - list of Python packages required to generate the page
 
 Page layout is based on the [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) theme.
+
+Github Actions (customised in `.github/workflows/`) are used to run automatic tests after every commit. 
+These checks ensure that the page is generated correctly and that all links are valid.
+
+## How to contribute
+
+If you want to contribute to the page, please follow these steps:
+1. Create new branch from the main `master` branch
+2. Make changes in the new branch
+3. Create pull request to the `master` branch
+4. Wait for the review and merge. Once the pull requests is merged, Github Actions will automatically deploy the page to https://grzanka.github.io/proton-irradiation-www/
