@@ -2,12 +2,6 @@
 hide:
     - toc
     - navigation
-enable:
-    - tabs
-
-theme:
-  features:
-    - [tabs]
 ---
 
 There are just few steps to obtain the beam time for your experiment:
