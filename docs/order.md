@@ -4,9 +4,9 @@ hide:
     - navigation
 ---
 
-There are just few steps to obtain the beam time for your experiment:
+There are just few steps to obtain the beam time for your sample:
 
-1. #### Contact us by email and describe your experimental needs
+1. #### Contact us by email and describe your needs
 
      we respond to you to clarify basic aspects of the irradiations such as beam parameters, administrative objectives, financing, scientific side etc..
      
@@ -24,4 +24,3 @@ There are just few steps to obtain the beam time for your experiment:
 4. #### Send us an offical Beam Time Order
 
     order should be based on our offer
-
