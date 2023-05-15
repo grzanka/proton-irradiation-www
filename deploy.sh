@@ -29,6 +29,11 @@ rm -rf site
 # Build mkdocs site
 mkdocs build
 
+# Import all enviroment variables from .env file if exists
+set -o allexport
+[[ -f .env ]] && source .env
+set +o allexport
+
 # Check if LFTP_PASSWORD environment variable is set, if that is the case, upload site to server
 if [ -z "$LFTP_PASSWORD" ]
 then
