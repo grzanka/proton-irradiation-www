@@ -17,12 +17,12 @@ jobs:
          python-version: ['3.9', '3.10', '3.11']
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
       - name: Setup Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v3
         with:
           python-version: ${{ matrix.python-version }}
 
@@ -35,7 +35,7 @@ jobs:
         run: mkdocs build
 
       - name: Store the build artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: mkdocs-site
           path: site
@@ -47,7 +47,7 @@ jobs:
     needs: build-and-test
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
@@ -62,7 +62,7 @@ jobs:
     needs: build-and-test
     steps:
       - name: Get the build artifacts
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: mkdocs-site
           path: site
