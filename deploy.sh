@@ -21,13 +21,34 @@ fi
 source venv/bin/activate
 
 # Install dependencies
-pip install -r requirements.txt
+pip install --requirement requirements.txt --upgrade
 
 # Remove old builds of mkdocs site
 rm -rf site
 
 # Build mkdocs site
 mkdocs build
+
+# Check if LFTP_PASSWORD environment variable is set, if that is the case, upload site to server
+if [ -z "$LFTP_PASSWORD" ]
+then
+    echo "LFTP_PASSWORD environment variable is not set, skipping upload"
+elif [ -z "$LFTP_USER" ]
+then
+    echo "LFTP_USER environment variable is not set, skipping upload"
+elif [ -z "$LFTP_HOST" ]
+then
+    echo "LFTP_HOST environment variable is not set, skipping upload"
+elif [ -z "$LFTP_PORT" ]
+then
+    echo "LFTP_PORT environment variable is not set, skipping upload"
+elif [ -z "$LFTP_PATH" ]
+then
+    echo "LFTP_PATH environment variable is not set, skipping upload"
+else
+    echo "Uploading site to server"
+    lftp --env-password sftp://$LFTP_USER@$LFTP_HOST:$LFTP_PORT -e "mirror --delete -L site $LFTP_PATH; quit"
+fi
 
 # Deactivate virtual environment
 deactivate
