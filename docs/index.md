@@ -5,8 +5,8 @@ hide:
 ---
 
 ### Proton Irradiation Station for industry and science
-We  perform irradiations with an energy of protons to 60 MeV with a wide range of beam intensity and field sizes.
-We offer various techniques of active and passive dosimetry at two irradiation stations. 
+We  perform irradiations with an energy of protons up to 60 MeV with a wide range of beam intensities and field sizes.
+We apply various techniques of active and passive dosimetry at two irradiation stations. 
 Parameters such as dose rate or proton beam flux are monitored during the experiments and recorded.
 
 Our infrastructure allows us to irradiate various types of samples:
