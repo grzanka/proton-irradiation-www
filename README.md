@@ -31,6 +31,11 @@ Page layout is based on the [Material for MkDocs](https://squidfunk.github.io/mk
 Github Actions (customised in `.github/workflows/`) are used to run automatic tests after every commit. 
 These checks ensure that the page is generated correctly and that all links are valid.
 
+## Deployment
+
+LFTP deploy is handled by `deploy.sh` script. It assumes that necessary credentials are stored in the `.env` file of in the environment variables.
+You can use it to deploy site to the IFJ web server.
+
 ## How to contribute
 
 If you want to contribute to the page, please follow these steps:
