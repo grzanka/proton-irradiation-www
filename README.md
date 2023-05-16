@@ -1,10 +1,11 @@
 # proton-irradiation-www
 Website for proton irradiation station at IFJ PAN:
-  - https://grzanka.github.io/proton-irradiation-www/
+  - development version of the site: https://grzanka.github.io/proton-irradiation-www/
+  - production version of the site: https://proton-irradiation.ifj.edu.pl/
 
 ## Installation
 
-To serve the page install first mkdocs in virtual environment:
+To serve the page install first `mkdocs` in a virtual environment:
 
 ```bash
 python3 -m venv venv
