@@ -53,7 +53,7 @@ then
 else
     echo "Uploading site to server from $PWD/site to $LFTP_PATH on $LFTP_HOST:$LFTP_PORT as $LFTP_USER"
     # find all directories and files in site/ and upload them to server
-    find site/ -type d -exec lftp --env-password sftp://$LFTP_USER@$LFTP_HOST:$LFTP_PORT -e "mkdir $LFTP_PATH{}; chmod o+rx $LFTP_PATH{}; quit" \;
+    find site/ -type d -execdir lftp --env-password sftp://$LFTP_USER@$LFTP_HOST:$LFTP_PORT -e "mkdir $LFTP_PATH{}; chmod o+rx $LFTP_PATH{}; quit" \;
     lftp --env-password sftp://$LFTP_USER@$LFTP_HOST:$LFTP_PORT -e "cls -al $LFTP_PATH; quit"
 #    lftp --env-password sftp://$LFTP_USER@$LFTP_HOST:$LFTP_PORT -e "mirror --delete --reverse site/ $LFTP_PATH; chmod --recursive o-w $LFTP_PATH; chmod --recursive o+r $LFTP_PATH; cls -al $LFTP_PATH; quit"
 fi
