@@ -55,7 +55,7 @@ then
     echo "LFTP_PATH environment variable is not set, skipping upload"
 else
     echo "Uploading site to server"
-    lftp --env-password sftp://$LFTP_USER@$LFTP_HOST:$LFTP_PORT -e "mirror --delete --reverse site $LFTP_PATH; chmod --recursive o-w $LFTP_PATH; chown --recursive $LFTP_USER:$LFTP_GROUP $LFTP_PATH; quit"
+    lftp --env-password sftp://$LFTP_USER@$LFTP_HOST:$LFTP_PORT -e "mirror --allow-chown --delete --reverse site $LFTP_PATH; chmod --recursive o-w $LFTP_PATH; quit"
 fi
 
 # Deactivate virtual environment
