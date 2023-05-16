@@ -66,8 +66,8 @@ else
     lftp --env-password sftp://$LFTP_USER@$LFTP_HOST:$LFTP_PORT -e "cls -al $LFTP_PATH; quit"
 
     # find all directories and files in site/ and upload them to server
-    find site/ -type d -execdir lftp --env-password sftp://$LFTP_USER@$LFTP_HOST:$LFTP_PORT -e "rm -rf $LFTP_PATH{}; mkdir $LFTP_PATH{}; chmod o+rx $LFTP_PATH{}; quit" \;
-    find site/ -type d -execdir lftp --env-password sftp://$LFTP_USER@$LFTP_HOST:$LFTP_PORT -e "rmdir $LFTP_PATH{}; chmod o+rx $LFTP_PATH{}; quit" \;
+    #find site/ -type d -execdir lftp --env-password sftp://$LFTP_USER@$LFTP_HOST:$LFTP_PORT -e "rm -rf $LFTP_PATH{}; mkdir $LFTP_PATH{}; chmod o+rx $LFTP_PATH{}; quit" \;
+    #find site/ -type d -execdir lftp --env-password sftp://$LFTP_USER@$LFTP_HOST:$LFTP_PORT -e "rmdir $LFTP_PATH{}; chmod o+rx $LFTP_PATH{}; quit" \;
 #    lftp --env-password sftp://$LFTP_USER@$LFTP_HOST:$LFTP_PORT -e "mirror --delete --reverse site/ $LFTP_PATH; chmod --recursive o-w $LFTP_PATH; chmod --recursive o+r $LFTP_PATH; cls -al $LFTP_PATH; quit"
 fi
 
