@@ -59,16 +59,23 @@ else
     # remove all files and directories on server contained in local server_contents.txt file
     while read -r line; do
         if [[ $line == *"$LFTP_PATH"* ]]; then
+            echo "Removing $line from server"
             lftp --env-password sftp://$LFTP_USER@$LFTP_HOST:$LFTP_PORT -e "rm -rf $line; quit"
         fi
     done < server_contents.txt
 
     # check if all the files were removed
+    echo "Checking if all files were removed"
     lftp --env-password sftp://$LFTP_USER@$LFTP_HOST:$LFTP_PORT -e "cls -al $LFTP_PATH; quit"
 
     # find all directories and files in site/ and upload them to server
-    find site/ -type d -execdir lftp --env-password sftp://$LFTP_USER@$LFTP_HOST:$LFTP_PORT -e "mkdir $LFTP_PATH{}; chmod o+rx $LFTP_PATH{}; quit" \;    
-    #lftp --env-password sftp://$LFTP_USER@$LFTP_HOST:$LFTP_PORT -e "mirror --delete --reverse site/ $LFTP_PATH; chmod --recursive o-w $LFTP_PATH; chmod --recursive o+r $LFTP_PATH; cls -al $LFTP_PATH; quit"
+    echo "Making directories on server"
+    find site/ -type d -execdir lftp --env-password sftp://$LFTP_USER@$LFTP_HOST:$LFTP_PORT -e "mkdir $LFTP_PATH{}; chmod o+rx $LFTP_PATH{}; quit" \;
+    find site/ -type t -execdir lftp --env-password sftp://$LFTP_USER@$LFTP_HOST:$LFTP_PORT -e "mput $LFTP_PATH{}; chmod o+r $LFTP_PATH{}; quit" \;
+
+    echo "Checking if all files were created"
+    lftp --env-password sftp://$LFTP_USER@$LFTP_HOST:$LFTP_PORT -e "cls -al $LFTP_PATH; quit"
+
 fi
 
 # Deactivate virtual environment
