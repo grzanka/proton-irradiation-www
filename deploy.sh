@@ -82,7 +82,9 @@ else
     echo "Checking if all files were created"
     lftp --env-password sftp://$LFTP_USER@$LFTP_HOST:$LFTP_PORT -e "cls -al $LFTP_PATH; quit"
 
-    # cd ..
+    cd site
+    find . -type f -exec lftp --env-password sftp://$LFTP_USER@$LFTP_HOST:$LFTP_PORT -e "chmod o+r $LFTP_PATH{}; quit" \;
+    cd ..
 
 fi
 
