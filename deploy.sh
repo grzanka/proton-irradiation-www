@@ -73,7 +73,7 @@ else
     cd site
     find . -type d -exec lftp --env-password sftp://$LFTP_USER@$LFTP_HOST:$LFTP_PORT -e "mkdir $LFTP_PATH{}; chmod o+rx $LFTP_PATH{}; quit" \;
     echo "Uploading files to server"
-    find . -type f -execdir lftp --env-password sftp://$LFTP_USER@$LFTP_HOST:$LFTP_PORT -e "put {} $LFTP_PATH{}; chmod o+r $LFTP_PATH{}; quit" \;
+    find . -type f -exec lftp --env-password sftp://$LFTP_USER@$LFTP_HOST:$LFTP_PORT -e "get {} -o $LFTP_PATH{}; chmod o+r $LFTP_PATH{}; quit" \;
 
     echo "Checking if all files were created"
     lftp --env-password sftp://$LFTP_USER@$LFTP_HOST:$LFTP_PORT -e "cls -al $LFTP_PATH; quit"
