@@ -77,7 +77,7 @@ else
 
     lftp --env-password sftp://$LFTP_USER@$LFTP_HOST:$LFTP_PORT -e "mirror -R site/ $LFTP_PATH; quit"
 
-    lftp --env-password sftp://$LFTP_USER@$LFTP_HOST:$LFTP_PORT -e "glob -f echo $LFTP_PATH; quit"
+    lftp --env-password sftp://$LFTP_USER@$LFTP_HOST:$LFTP_PORT -e "glob -f echo $LFTP_PATH/*; quit"
 
     echo "Checking if all files were created"
     lftp --env-password sftp://$LFTP_USER@$LFTP_HOST:$LFTP_PORT -e "cls -al $LFTP_PATH; quit"
