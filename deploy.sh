@@ -68,23 +68,20 @@ else
     echo "Checking if all files were removed"
     lftp --env-password sftp://$LFTP_USER@$LFTP_HOST:$LFTP_PORT -e "cls -al $LFTP_PATH; quit"
 
-    # # find all directories and files in site/ and upload them to server
-    # echo "Making directories on server"
-    # cd site
-    # find . -type d -exec lftp --env-password sftp://$LFTP_USER@$LFTP_HOST:$LFTP_PORT -e "mkdir $LFTP_PATH{}; chmod o+rx $LFTP_PATH{}; quit" \;
-    # echo "Uploading files to server"
-    # find . -type f -exec lftp --env-password sftp://$LFTP_USER@$LFTP_HOST:$LFTP_PORT -e "get {} -o $LFTP_PATH{}; chmod o+r $LFTP_PATH{}; quit" \;
-
+    # upload all files and directories from local site/ directory to server
     lftp --env-password sftp://$LFTP_USER@$LFTP_HOST:$LFTP_PORT -e "mirror -R site/ $LFTP_PATH; quit"
-
-    lftp --env-password sftp://$LFTP_USER@$LFTP_HOST:$LFTP_PORT -e "glob -f echo $LFTP_PATH/*; quit"
-
+    
     echo "Checking if all files were created"
     lftp --env-password sftp://$LFTP_USER@$LFTP_HOST:$LFTP_PORT -e "cls -al $LFTP_PATH; quit"
 
+    # change permissions of all files and directories on server
     cd site
     find . -type f -exec lftp --env-password sftp://$LFTP_USER@$LFTP_HOST:$LFTP_PORT -e "chmod o+r $LFTP_PATH{}; quit" \;
+    find . -type d -exec lftp --env-password sftp://$LFTP_USER@$LFTP_HOST:$LFTP_PORT -e "chmod o+rx $LFTP_PATH{}; quit" \;
     cd ..
+
+    echo "Checking if all files were created with proper permissions"
+    lftp --env-password sftp://$LFTP_USER@$LFTP_HOST:$LFTP_PORT -e "cls -al $LFTP_PATH; quit"
 
 fi
 
