@@ -41,9 +41,6 @@ then
 elif [ -z "$LFTP_USER" ]
 then
     echo "LFTP_USER environment variable is not set, skipping upload"
-elif [ -z "$LFTP_GROUP" ]
-then
-    echo "LFTP_GROUP environment variable is not set, skipping upload"
 elif [ -z "$LFTP_HOST" ]
 then
     echo "LFTP_HOST environment variable is not set, skipping upload"
@@ -54,8 +51,8 @@ elif [ -z "$LFTP_PATH" ]
 then
     echo "LFTP_PATH environment variable is not set, skipping upload"
 else
-    echo "Uploading site to server"
-    lftp --env-password sftp://$LFTP_USER@$LFTP_HOST:$LFTP_PORT -e "mirror --allow-chown --delete --reverse site $LFTP_PATH; chmod --recursive o-w $LFTP_PATH; quit"
+    echo "Uploading site to server from $PWD/site to $LFTP_PATH on $LFTP_HOST:$LFTP_PORT as $LFTP_USER"
+    lftp --env-password sftp://$LFTP_USER@$LFTP_HOST:$LFTP_PORT -e "mirror --delete --reverse site/ $LFTP_PATH; chmod --recursive o-w $LFTP_PATH; quit"
 fi
 
 # Deactivate virtual environment
