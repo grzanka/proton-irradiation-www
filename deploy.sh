@@ -10,7 +10,7 @@ then
     exit
 fi
 
-# Check if venv directory exists
+# Check if venv directory exists and create venv enviroment if it doesn't
 if [ ! -d "venv" ]
 then
     echo "Creating virtual environment"
@@ -20,7 +20,7 @@ fi
 # Activate virtual environment
 source venv/bin/activate
 
-# Install dependencies
+# Install and upgrade dependencies (mkdocs and others)
 pip install --requirement requirements.txt --upgrade
 
 # Remove old builds of mkdocs site
@@ -29,12 +29,12 @@ rm -rf site
 # Build mkdocs site
 mkdocs build
 
-# Import all enviroment variables from .env file if exists
+# Import all enviroment variables from .env file if it exists
 set -o allexport
 [[ -f .env ]] && source .env
 set +o allexport
 
-# Check if LFTP_PASSWORD environment variable is set, if that is the case, upload site to server
+# Check if all enviroment variables needed to deploy site are set, if not, skip upload
 if [ -z "$LFTP_PASSWORD" ]
 then
     echo "LFTP_PASSWORD environment variable is not set, skipping upload"
@@ -53,10 +53,13 @@ then
 else
     echo "Uploading site to server from $PWD/site to $LFTP_PATH on $LFTP_HOST:$LFTP_PORT as $LFTP_USER"
 
-    # list of files and directories on server
+    # we start first by removing all previously uploaded files and directories from server
+    # as LFTP doesn't support recursive removal of files and directories, 
+    # we start first by list all files and directories on server
+    # and then remove them one by one
     lftp --env-password sftp://$LFTP_USER@$LFTP_HOST:$LFTP_PORT -e "cls $LFTP_PATH; quit" > server_contents.txt
 
-    # remove all files and directories on server contained in local server_contents.txt file
+    # remove one-by-one all files and directories on server contained in local server_contents.txt file
     while read -r line; do
         if [[ $line == *"$LFTP_PATH"* ]]; then
             echo "Removing $line from server"
@@ -74,7 +77,10 @@ else
     echo "Checking if all files were created"
     lftp --env-password sftp://$LFTP_USER@$LFTP_HOST:$LFTP_PORT -e "cls -al $LFTP_PATH; quit"
 
-    # change permissions of all files and directories on server
+    # at first glance it may look like that the mirror command should do the job, but unfortunately it doesn't
+    # all the uploaded files with get null permissions for "others" (0x640 for files and 0x750 for directories)
+    # to be able to serve the page we need to change the permissions of all files and directories to 0x644 and 0x755 respectively
+    # again, LFTP doesn't support recursive chmod, so we need to do it one by one, separately for files and directories
     cd site
     find . -type f -exec lftp --env-password sftp://$LFTP_USER@$LFTP_HOST:$LFTP_PORT -e "chmod o+r $LFTP_PATH{}; quit" \;
     find . -type d -exec lftp --env-password sftp://$LFTP_USER@$LFTP_HOST:$LFTP_PORT -e "chmod o+rx $LFTP_PATH{}; quit" \;

@@ -26,6 +26,8 @@ The page is generated using [mkdocs](https://www.mkdocs.org/). The repository co
 - `mkdocs.yml` - configuration file for the mkdocs
 - `overrides` - directory with the customised CSS and HTML files
 - `requirements.txt` - list of Python packages required to generate the page
+- `.env` - file with enviroment variables for connection details to deploy site to IFJ server (server, username, path)
+- `deploy.sh` - deploy script which builds the page and uploads it to IFJ server
 
 Page layout is based on the [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) theme.
 
