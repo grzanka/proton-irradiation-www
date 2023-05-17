@@ -42,7 +42,8 @@ You can use it to deploy site to the IFJ web server.
 ## How to contribute
 
 If you want to contribute to the page, please follow these steps:
-1. Create new branch from the main `master` branch
+1. Create new branch from the `main` branch
 2. Make changes in the new branch
-3. Create pull request to the `master` branch
+3. Create pull request to the `main` branch
 4. Wait for the review and merge. Once the pull requests is merged, Github Actions will automatically deploy the page to https://grzanka.github.io/proton-irradiation-www/
+5. Deploy to the production server is handled manually using `deploy.sh` script. 
