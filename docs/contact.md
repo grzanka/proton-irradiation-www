@@ -6,10 +6,7 @@ hide:
 
 ### Administration:
 
-M.Sc., Eng. Dominika Handzlik
-
-- tel: +48126628415, +48691113374
-- e-mail: proton.irradiations@ifj.edu.pl
+For all inquiries regarding the facility, please contact us via email:  proton.irradiations@ifj.edu.pl
 
 ### Adress:
 
