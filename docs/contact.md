@@ -4,11 +4,10 @@ hide:
     - navigation
 ---
 
-### Administration:
 
-For all inquiries regarding the facility, please contact us via email:  proton.irradiations@ifj.edu.pl
+Email:  proton.irradiations@ifj.edu.pl
 
-### Adress:
+Prof. Jan Swakoń, PhD
 
 Institute of Nuclear Physics PAN
 
