@@ -1,4 +1,4 @@
-site_name: Proton Irradiation Station at IFJ
+site_name: Proton Irradiation Station at IFJ PAN, Kraków
 theme:
   name: material
   custom_dir: overrides
