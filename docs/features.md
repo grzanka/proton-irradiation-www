@@ -15,7 +15,7 @@ Beam parameters:
 - Beam field size:    ≤ 40 mm;
 - Field homogeneity ≥ 5%;
 - Irradiation in SOBP available;
-- Sample positioning precision (> 0.1 mm);
+- Sample positioning precision: better than 0.1 mm;
 - Pulsed beam (double time structure);
 - Irradiation in air;
 
