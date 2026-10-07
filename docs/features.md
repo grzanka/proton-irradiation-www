@@ -7,15 +7,22 @@ hide:
 
 Beam parameters:
 
-- Energy up to 58.4 MeV;
-- Min flux of protons: 5e5 p/sec/cm2 (50MeV);
-- Typical flux: 1e8 – 1e9 p/sec/cm2;
-- Dose rate: 0.001 – 1 Gy/sec (measured in water);
+- Energy: 20 – 58.4 MeV (varied with a PMMA degrader);
+- Pulsed beam (double time structure);
+- Minimum flux: 5 × 10⁵ p/s/cm² (at 50 MeV);
+- Typical flux: 10⁸ – 10⁹ p/s/cm²;
+- Dose rate: 0.001 – 1 Gy/s (measured in water);
 - Single scattering;
-- Beam field size:    ≤ 40 mm;
-- Field homogeneity ≥ 5%;
+- Field size: diameter up to 4 cm;
+- Circular field; circular or rectangular collimators for small fields and for shielding parts of a board;
+- Field homogeneity: better than 5%;
 - Irradiation in SOBP available;
-- Sample positioning precision (> 0.1 mm);
+- Irradiation in air;
+
+Sample positioning:
+
+- Positioning precision: better than 0.1 mm;
+- Laser crosshair for sample alignment;
 
 
 ![Experimental hall 1](img/station1.png)
@@ -24,14 +31,19 @@ Beam parameters:
 
 Beam parameters:
 
-- Energy: 60 MeV (10MeV-60MeV);
-- Flux up to 1e11 p/sec/cm2 (at 60MeV);
-- Proton beam current:     2nA – 100nA;
-- Transmission to the experimental room 60-65% of extracted beam;
-- Possible Energy degradation to the 10 MeV;
-- Spot size:  ~ 10mm (1σ, estimated);
-- Flatness ≥ 15%;
-- High proton beam intensity and irradiation field configuration flexibility;
+- Energy: 20 – 60 MeV (varied with a PMMA degrader);
+- Pulsed beam (double time structure);
+- Flux: 10⁶ – 10¹⁰ p/s/cm²;
+- Maximum flux with a focused beam: 2 × 10¹⁰ p/s/cm² (field diameter 1 – 1.5 cm);
+- Field size: diameter 1 – 12 cm (3 cm at maximum flux; 12 cm for energies ≤ 50 MeV and flux < 10⁹ p/s/cm²);
+- Circular field; circular or rectangular collimators for small fields and for shielding parts of a board;
+- Irradiation in air;
+
+Sample positioning:
+
+- Remote-controlled XY table, travel range 38 cm × 21 cm;
+- Laser crosshair for sample alignment;
+- Camera view of the sample from the control room (on request);
 
 
 ![Experimental hall 12](img/exphall.png)
