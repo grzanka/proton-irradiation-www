@@ -16,6 +16,8 @@ Beam parameters:
 - Field homogeneity ≥ 5%;
 - Irradiation in SOBP available;
 - Sample positioning precision (> 0.1 mm);
+- Pulsed beam (double time structure);
+- Irradiation in air;
 
 
 ![Experimental hall 1](img/station1.png)
