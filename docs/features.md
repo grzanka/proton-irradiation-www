@@ -24,14 +24,19 @@ Beam parameters:
 
 Beam parameters:
 
-- Energy: 60 MeV (10MeV-60MeV);
-- Flux up to 1e11 p/sec/cm2 (at 60MeV);
-- Proton beam current:     2nA – 100nA;
-- Transmission to the experimental room 60-65% of extracted beam;
-- Possible Energy degradation to the 10 MeV;
-- Spot size:  ~ 10mm (1σ, estimated);
-- Flatness ≥ 15%;
-- High proton beam intensity and irradiation field configuration flexibility;
+- Energy: 20 – 60 MeV (varied with a PMMA degrader);
+- Flux: 1e6 – 1e10 p/sec/cm2;
+- Up to 2e10 p/sec/cm2 with a focused beam (field diameter 1 – 1.5 cm);
+- Field size: 1 – 12 cm diameter (3 cm at maximum flux; 12 cm for energies ≤ 50 MeV and flux < 1e9 p/sec/cm2);
+- Circular field; circular or rectangular collimators for small fields and for shielding parts of a board;
+- Pulsed beam (double time structure);
+- Irradiation in air;
+
+Sample positioning:
+
+- Remote-controlled XY table, travel range 38 cm × 21 cm;
+- Laser crosshair for sample alignment;
+- Camera view of the sample from the control room (on request);
 
 
 ![Experimental hall 12](img/exphall.png)
