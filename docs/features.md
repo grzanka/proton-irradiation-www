@@ -7,7 +7,7 @@ hide:
 
 Beam parameters:
 
-- Energy up to 58.4 MeV;
+- Energy: 20 – 58.4 MeV;
 - Min flux of protons: 5e5 p/sec/cm2 (50MeV);
 - Typical flux: 1e8 – 1e9 p/sec/cm2;
 - Dose rate: 0.001 – 1 Gy/sec (measured in water);
