@@ -1,6 +1,9 @@
 # run install of python requirements
 name: Automated Tests
 
+permissions:
+  contents: read
+
 on:
   push:
     branches: [main]
