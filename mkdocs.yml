@@ -57,7 +57,7 @@ plugins:
 extra:
   social:
     - icon: fontawesome/solid/paper-plane
-      link: mailto:proton.irradiations@ifj.edu.pl
+      link: mailto:proton.irradiation@ifj.edu.pl
 nav:
     - Home: index.md
     - Features: features.md

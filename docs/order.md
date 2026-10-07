@@ -10,7 +10,7 @@ There are just few steps to obtain the beam time for your sample:
 
      we respond to you to clarify basic aspects of the irradiations such as beam parameters, administrative objectives, financing, scientific side etc..
      
-    - contact us via proton.irradiations@ifj.edu.pl
+    - contact us via proton.irradiation@ifj.edu.pl
 
 
 2. #### Take part in online meeting

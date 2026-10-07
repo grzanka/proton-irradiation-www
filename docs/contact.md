@@ -5,7 +5,7 @@ hide:
 ---
 
 
-Email:  proton.irradiations@ifj.edu.pl
+Email:  proton.irradiation@ifj.edu.pl
 
 Prof. Jan Swakoń, PhD
 
