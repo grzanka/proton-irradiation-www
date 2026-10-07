@@ -22,6 +22,7 @@ Beam parameters:
 Sample positioning:
 
 - Positioning precision: better than 0.1 mm;
+- Laser crosshair for sample alignment;
 
 
 ![Experimental hall 1](img/station1.png)
