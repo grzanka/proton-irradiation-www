@@ -12,7 +12,8 @@ Beam parameters:
 - Typical flux: 1e8 – 1e9 p/sec/cm2;
 - Dose rate: 0.001 – 1 Gy/sec (measured in water);
 - Single scattering;
-- Beam field size:    ≤ 40 mm;
+- Field size: diameter up to 4 cm;
+- Circular field; circular or rectangular collimators for small fields and for shielding parts of a board;
 - Field homogeneity ≥ 5%;
 - Irradiation in SOBP available;
 - Sample positioning precision: better than 0.1 mm;
