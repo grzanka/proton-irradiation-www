@@ -14,7 +14,7 @@ Beam parameters:
 - Single scattering;
 - Field size: diameter up to 4 cm;
 - Circular field; circular or rectangular collimators for small fields and for shielding parts of a board;
-- Field homogeneity ≥ 5%;
+- Field homogeneity: better than 5%;
 - Irradiation in SOBP available;
 - Sample positioning precision: better than 0.1 mm;
 - Pulsed beam (double time structure);
