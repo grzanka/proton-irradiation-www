@@ -7,7 +7,7 @@ hide:
 
 Beam parameters:
 
-- Energy: 20 – 58.4 MeV;
+- Energy: 20 – 58.4 MeV (varied with a PMMA degrader);
 - Min flux of protons: 5 × 10⁵ p/s/cm² (50 MeV);
 - Typical flux: 10⁸ – 10⁹ p/s/cm²;
 - Dose rate: 0.001 – 1 Gy/s (measured in water);
