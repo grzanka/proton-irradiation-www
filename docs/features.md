@@ -9,8 +9,8 @@ Beam parameters:
 
 - Energy: 20 – 58.4 MeV (varied with a PMMA degrader);
 - Pulsed beam (double time structure);
-- Minimum flux: 5 × 10⁵ p/s/cm² (at 50 MeV);
-- Typical flux: 10⁸ – 10⁹ p/s/cm²;
+- Minimum flux: 5 × 10⁵ p/(s·cm²) (at 50 MeV);
+- Typical flux: 10⁸ – 10⁹ p/(s·cm²);
 - Dose rate: 0.001 – 1 Gy/s (measured in water);
 - Single scattering;
 - Field size: diameter up to 4 cm;
@@ -33,9 +33,9 @@ Beam parameters:
 
 - Energy: 20 – 60 MeV (varied with a PMMA degrader);
 - Pulsed beam (double time structure);
-- Flux: 10⁶ – 10¹⁰ p/s/cm²;
-- Maximum flux with a focused beam: 2 × 10¹⁰ p/s/cm² (field diameter 1 – 1.5 cm);
-- Field size: diameter 1 – 12 cm (3 cm at maximum flux; 12 cm for energies ≤ 50 MeV and flux < 10⁹ p/s/cm²);
+- Flux: 10⁶ – 10¹⁰ p/(s·cm²);
+- Maximum flux with a focused beam: 2 × 10¹⁰ p/(s·cm²) (field diameter 1 – 1.5 cm);
+- Field size: diameter 1 – 12 cm (3 cm at maximum flux; 12 cm for energies ≤ 50 MeV and flux < 10⁹ p/(s·cm²));
 - Circular field; circular or rectangular collimators for small fields and for shielding parts of a board;
 - Irradiation in air;
 
