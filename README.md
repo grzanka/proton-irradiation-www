@@ -39,6 +39,29 @@ These checks ensure that the page is generated correctly and that all links are 
 LFTP deploy is handled by `deploy.sh` script. It assumes that necessary credentials are stored in the `.env` file of in the environment variables.
 You can use it to deploy site to the IFJ web server.
 
+### Deploying from a new machine
+
+If you run `deploy.sh` for the first time on a new machine, the upload may hang silently right after the
+`Uploading site to server ...` message. This happens because the server's SSH host key is not yet known to the machine:
+`ssh` (used by LFTP under the hood) asks for confirmation, LFTP answers "no" and keeps retrying the connection.
+
+To fix it, connect once manually with `ssh`, using the connection details from the `.env` file:
+
+```bash
+set -a; source .env; set +a
+ssh -p $LFTP_PORT $LFTP_USER@$LFTP_HOST
+```
+
+`ssh` will ask whether you want to continue connecting and show the server's key fingerprint.
+Check that the fingerprint is correct and answer `yes`; the key will be saved in `~/.ssh/known_hosts`.
+After that `deploy.sh` should work normally.
+
+If the upload still hangs, run LFTP with debug output enabled (`-d`) to see where it gets stuck, for example:
+
+```bash
+lftp -d --env-password sftp://$LFTP_USER@$LFTP_HOST:$LFTP_PORT -e "set net:max-retries 1; cls $LFTP_PATH; quit"
+```
+
 ## How to contribute
 
 If you want to contribute to the page, please follow these steps:
